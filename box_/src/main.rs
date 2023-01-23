@@ -190,10 +190,10 @@ fn main() {
     })();
 
     if let Err(e) = &res {
-        println!("Error: {}", e);
+        eprintln!("Error: {}", e);
     }
     if let Err(e) = reset_res {
-        println!(
+        eprintln!(
             "An error {}occurred while trying to reset terminal settings: {}",
             if res.is_err() { "also " } else { "" },
             e
